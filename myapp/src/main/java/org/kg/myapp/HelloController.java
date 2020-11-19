@@ -19,7 +19,7 @@ public class HelloController {
 	public void sayHello(String name) {
 //		System.out.print("시작시간 : ");
 //		helloLog.printTime();
-		System.out.println(helloService.sayHello(name)); //
+		System.out.println(helloService.sayHello(name)); 
 //		System.out.print("종료시간 : ");
 //		helloLog.printTime();
 	}

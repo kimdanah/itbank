@@ -21,16 +21,8 @@
 	<context:component-scan base-package="org.kg.myapp"/>
 	<context:component-scan base-package="org.kg.myapp.*"/>
 
-	<aop:config>
-		<aop:pointcut expression="execution(* org.kg..HelloController.sayHello(..))" id="timelog"/>
-		<aop:aspect ref="helloLog">
-			<aop:before method="printTime" pointcut-ref="timelog"/>
-		</aop:aspect>
-	</aop:config>
+	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
 		
-
-
-
 </beans>
 
 

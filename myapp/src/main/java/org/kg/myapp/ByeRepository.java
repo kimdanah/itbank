@@ -7,7 +7,7 @@ public class ByeRepository implements IHelloRepository {
 	
 	@Override
 	public String sayHello(String name) {
-		return name+"안녕하세요!(MySQL)";
+		return name+" 님 안녕하세요!(MySQL)";
 		
 	}
 
