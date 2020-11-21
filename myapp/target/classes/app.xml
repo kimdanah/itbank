@@ -22,7 +22,7 @@
 	<context:component-scan base-package="org.kg.myapp.*"/>
 
 	<aop:aspectj-autoproxy/>
-	
+	<!-- Spring JDBC 설정 -->
 	<context:property-placeholder location="classpath:db/jdbc.properties"/>
 	
 	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">

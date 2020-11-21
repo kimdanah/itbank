@@ -30,50 +30,62 @@ public class EmpService implements IEmpService {
 
 	@Override
 	public EmpVO getEmpInfo(int empId) {
-		// TODO Auto-generated method stub
-		return null;
+		return empRepository.getEmpInfo(empId);
 	}
 
 	@Override
 	public void updateEmp(EmpVO emp) {
-		// TODO Auto-generated method stub
-
+		empRepository.updateEmp(emp);
 	}
 
 	@Override
 	public void insertEmp(EmpVO emp) {
-		// TODO Auto-generated method stub
-
+		empRepository.updateEmp(emp);
 	}
 
 	@Override
 	public void deleteEmp(int empId) {
-		// TODO Auto-generated method stub
-
+		empRepository.deleteEmp(empId);
 	}
 
 	@Override
 	public void deleteJobHistory(int empId) {
-		// TODO Auto-generated method stub
-
+		empRepository.deleteJobHistory(empId);
 	}
 
 	@Override
 	public List<Map<String, Object>> getAllDeptId() {
-		// TODO Auto-generated method stub
-		return null;
+		return empRepository.getAllDeptId();
 	}
 
 	@Override
 	public List<Map<String, Object>> getAllJobId() {
-		// TODO Auto-generated method stub
-		return null;
+		return empRepository.getAllJobId();
 	}
 
 	@Override
 	public List<Map<String, Object>> getAllManagerId() {
-		// TODO Auto-generated method stub
-		return null;
+		return empRepository.getAllManagerId();
 	}
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
