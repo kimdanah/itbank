@@ -11,12 +11,9 @@ public class EmpMain {
 		AbstractApplicationContext con = new GenericXmlApplicationContext("app.xml");
 		IEmpService empService = con.getBean( "empService" ,IEmpService.class);
 		System.out.println("사원의 수 : "+ empService.getEmpCount());
-		System.out.println("------------------------------------");
 		System.out.println("부서 인원 : " + empService.getEmpCount(30));
-		System.out.println("------------------------------------");
 		System.out.println("사원 목록 : " + empService.getEmpList());
-		System.out.println("------------------------------------");
-		System.out.println("매니저아이디 : " + empService.getAllManagerId());
+		System.out.println("관리자Id : " + empService.getAllManagerId());
 		con.close();
 	}
 
