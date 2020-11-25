@@ -21,6 +21,10 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
+<<<<<<< HEAD
 	<context:component-scan base-package="org.kg.myapp.emp.controller" />
+=======
+	<context:component-scan base-package="org.kg.myapp" />
+>>>>>>> refs/remotes/origin/master
 	
 </beans:beans>

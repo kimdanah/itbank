@@ -68,6 +68,7 @@ public class EmpService implements IEmpService {
 		return empRepository.getAllManagerId();
 	}
 
+<<<<<<< HEAD
 	@Override
 	public List<EmpVO> getSearchList(String name) {
 		name = "%"+name+"%";
@@ -79,3 +80,26 @@ public class EmpService implements IEmpService {
 	
 }
 	
+=======
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+>>>>>>> refs/remotes/origin/master

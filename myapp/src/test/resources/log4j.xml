@@ -31,6 +31,11 @@
 	<logger name="org.springframework.web">
 		<level value="info" />
 	</logger>
+<<<<<<< HEAD
+=======
+	
+
+>>>>>>> refs/remotes/origin/master
 
 	<!-- Root Logger -->
 	<root>

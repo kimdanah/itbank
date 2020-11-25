@@ -18,5 +18,9 @@ public interface IEmpService {
 	List<Map<String,Object>> getAllDeptId();
 	List<Map<String,Object>> getAllJobId();
 	List<Map<String,Object>> getAllManagerId();
+<<<<<<< HEAD
 	List<EmpVO> getSearchList(String name);
+=======
+	
+>>>>>>> refs/remotes/origin/master
 }

@@ -84,6 +84,7 @@ public class EmpRepository implements IEmpRepository {
 		jdbcTemplate.update(sql,emp.getFirstName(),emp.getLastName(),
 					emp.getEmail(),emp.getPhoneNumber(),emp.getHireDate(),
 					emp.getJobId(),emp.getSalary(),emp.getCommissionPct(),
+<<<<<<< HEAD
 					emp.getManagerId(),emp.getDepartmentId(),emp.getEmployeeId());
 	}
 	
@@ -157,3 +158,71 @@ public class EmpRepository implements IEmpRepository {
 	
 
 }
+=======
+					emp.getManagerId(),emp.getDepartmentId(),emp.getEmplyeeId());
+	}
+	
+	@Override
+	public void insertEmp(EmpVO emp) {
+		String sql = "insert into employees" + "values(?,?,?,?,?,sysdate,?,?,?,?,?)";
+		jdbcTemplate.update(sql,emp.getEmplyeeId(),
+		emp.getFirstName(),emp.getLastName(),emp.getEmail(),
+		emp.getPhoneNumber(),emp.getJobId(),emp.getSalary(),
+		emp.getCommissionPct(),emp.getManagerId(),emp.getDepartmentId());
+	}
+	
+	@Override
+	public void deleteEmp(int empId) {
+		String sql = "delete from employees where employee_id?";
+		jdbcTemplate.update(sql, empId);
+	}
+	
+	@Override
+	public void deleteJobHistory(int empId) {
+		String sql = "delete from job_history where employee_id=?";
+		jdbcTemplate.update(sql, empId);
+	}
+	
+	@Override
+	public List<Map<String, Object>> getAllDeptId() {
+		String sql = "select deprtment_id as departmentId,"
+					+"department_name as departmentName from departments";
+		return jdbcTemplate.queryForList(sql);
+	}
+	@Override
+	public List<Map<String, Object>> getAllJobId() {
+		String sql = "select job_id as jobId, job_title as jobTitle from jobs";
+		return jdbcTemplate.queryForList(sql);
+	}
+	@Override
+	public List<Map<String, Object>> getAllManagerId() {
+		String sql = "select employee_id as managerId,"
+					+"first_name||' '||last_name as managerName "
+					+"from employees "
+					+"where employee_id in "
+					+"(select distinct manager_id from employees)";
+		return jdbcTemplate.queryForList(sql);
+	}
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+}
+>>>>>>> refs/remotes/origin/master
